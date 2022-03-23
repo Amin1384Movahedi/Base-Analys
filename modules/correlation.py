@@ -10,7 +10,20 @@ def pearson_correlation(data):
 	corr = data.corr()
 	print(corr)
 
-	# seaborn for visualize pearson correlation coefficient
-	plt.figure(figsize=(11, 8))
-	sb.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, vmin=-1, vmax=+1)
-	plt.show()
+# Correlation plot doesn't end up being too informative
+
+def plot_corr(df, size=10):
+    '''Function plots a graphical correlation matrix for each pair of columns in the dataframe.
+    
+    Input:
+        df: pandas DataFrame
+        size: vertical and horizontal size of plot'''
+    
+    corr = df.corr()
+    fig, ax = plt.subplots(figsize=(size, size))
+    cax = ax.matshow(corr)
+    fig.colorbar(cax)
+    plt.xticks(range(len(corr.columns)), corr.columns, rotation='vertical')
+    plt.yticks(range(len(corr.columns)), corr.columns)
+    
+    plt.show()
