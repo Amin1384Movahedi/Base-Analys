@@ -2,16 +2,18 @@ import matplotlib.pyplot as plt
 import seaborn as sb 
 import scipy
 
+# Calculate spearman rank correlation by scipy modules
 def spearman_rank_func(x_data, y_data, x_label, y_label):
 	spearmanr, _ = scipy.stats.spearmanr(x_data, y_data)
 
 	return spearmanr
+
+# Calculate pearson correlation by pandas Dataframe's method
 def pearson_correlation(data):
 	corr = data.corr()
 	print(corr)
 
 # Correlation plot doesn't end up being too informative
-
 def plot_corr(df, size=10):
     '''Function plots a graphical correlation matrix for each pair of columns in the dataframe.
     
