@@ -2,7 +2,7 @@
 Created on 2022-01-24
 Updated on 2022-03-23 (Added several methods to improve the analysis results) 
 
-Author: Mohammad Amin Movahedi Moghadam
+Author: Mohammad Amin Movahedi Moghadam from Yazd, Iran
 Email: antonio1384minkowski@zohomail.eu
 '''
 
