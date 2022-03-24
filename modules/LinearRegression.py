@@ -1,10 +1,12 @@
 from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt 
 
+# Calculate Linear Regression by sklearn's model and plot the result by matplotlib
 def linear_model(x, y, x_label, y_label):
 	x = x.reshape((-1, 1))
 	model = LinearRegression().fit(x, y)
 
+	# Print the training results
 	print(f'linear regression coefficient of determination : {model.score(x, y)}')
 	print(f'intercept : {model.intercept_}')
 	print(f'slope : {model.coef_}')
